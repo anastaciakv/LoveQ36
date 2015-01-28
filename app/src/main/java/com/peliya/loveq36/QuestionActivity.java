@@ -7,6 +7,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
+
 
 public class QuestionActivity extends Activity {
     private TextView tvQuestion;
@@ -19,11 +22,15 @@ public class QuestionActivity extends Activity {
         setContentView(R.layout.activity_question);
         questions = getResources().getStringArray(R.array.questions);
         tvQuestion = (TextView) findViewById(R.id.tvQuestion);
+
         updateQ();
     }
 
     private void updateQ() {
         tvQuestion.setText(questions[position]);
+        YoYo.with(Techniques.FadeIn)
+                .duration(700)
+                .playOn(tvQuestion);
     }
 
     @Override
