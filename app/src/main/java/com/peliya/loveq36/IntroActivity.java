@@ -1,17 +1,14 @@
 package com.peliya.loveq36;
 
 import android.app.Activity;
-import android.app.ActivityOptions;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.transition.Explode;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
 
 
 public class IntroActivity extends Activity {
@@ -19,21 +16,17 @@ public class IntroActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // enable transitions
-        getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
         setContentView(R.layout.activity_intro);
     }
 
     public void onStartQ(View view) {
-        getWindow().setExitTransition(new Explode());
         Intent intent = new Intent(this, QuestionActivity.class);
-        startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
+        startActivity(intent);
         finish();
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_intro, menu);
         return true;
     }

@@ -23,7 +23,8 @@
         android:textSize="36sp"
         android:id="@+id/tvQuestion"
         android:gravity="center"
-        android:text="question text"
+        android:text="question text question text question text"
+        android:textColor="@color/primary_dark"
         android:textAllCaps="true"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
