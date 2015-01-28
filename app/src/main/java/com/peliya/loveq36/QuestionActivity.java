@@ -4,16 +4,27 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 
 public class QuestionActivity extends Activity {
+    private TextView tvQuestion;
+    private static int position = 0;
+    private static String[] questions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question);
+        questions = getResources().getStringArray(R.array.questions);
+        tvQuestion = (TextView) findViewById(R.id.tvQuestion);
+        updateQ();
     }
 
+    private void updateQ() {
+        tvQuestion.setText(questions[position]);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -35,5 +46,22 @@ public class QuestionActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void onNext(View view) {
+        if (position < questions.length - 1) {
+            position++;
+            updateQ();
+        } else {
+
+        }
+    }
+
+
+    public void onPrev(View view) {
+        if (position > 0) {
+            position--;
+            updateQ();
+        }
     }
 }

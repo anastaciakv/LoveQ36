@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="questions">
+        <item>question1</item>
+        <item>question2</item>
+        <item>question3</item>
+    </string-array>
+</resources>

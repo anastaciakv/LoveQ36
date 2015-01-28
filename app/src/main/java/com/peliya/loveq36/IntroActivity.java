@@ -2,7 +2,10 @@ package com.peliya.loveq36;
 
 import android.app.Activity;
 import android.app.ActivityOptions;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.transition.Explode;
 import android.view.Menu;
@@ -21,6 +24,12 @@ public class IntroActivity extends Activity {
         setContentView(R.layout.activity_intro);
     }
 
+    public void onStartQ(View view) {
+        getWindow().setExitTransition(new Explode());
+        Intent intent = new Intent(this, QuestionActivity.class);
+        startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
+        finish();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -31,22 +40,27 @@ public class IntroActivity extends Activity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+        if (id == R.id.action_view_study) {
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+            new AlertDialog.Builder(this)
+                    .setMessage(getString(R.string.msg_open_study))
+                    .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            String url = "http://psp.sagepub.com/content/23/4/363.full.pdf+html";
+                            Intent i = new Intent(Intent.ACTION_VIEW);
+                            i.setData(Uri.parse(url));
+                            startActivity(i);
+                        }
+                    }).setNegativeButton(android.R.string.cancel, null)
+                    .create().show();
+
             return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
 
-    public void onStartQ(View view) {
-        getWindow().setExitTransition(new Explode());
-        Intent intent = new Intent(this, QuestionActivity.class);
-        startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
-    }
+
 }

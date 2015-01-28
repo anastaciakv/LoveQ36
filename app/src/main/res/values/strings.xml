@@ -12,5 +12,6 @@
         \n\nAre you in?</string>
     <string name="title_activity_question">QuestionActivity</string>
     <string name="btn_get_started">GET STARTED</string>
+    <string name="msg_open_study">"Click OK if you want to load the study in PDF from Internet"</string>
 
 </resources>
