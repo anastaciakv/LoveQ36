@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Love Q36</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="intro_caption">To Fall in Love With Anyone</string>
+    <string name="intro_text">According to Dr. Aron's study, it's possible to fall in love with anyone!
+    \n\nA heterosexual man and woman enter the lab through separate doors. They sit face to face and answer a series of increasingly personal questions.
+    Then they stare silently into each other’s eyes for four minutes.
+    \n\nThe most tantalizing detail: Six months later, two participants were married!
+        \n\nAre you in?</string>
+    <string name="title_activity_question">QuestionActivity</string>
+
+</resources>
