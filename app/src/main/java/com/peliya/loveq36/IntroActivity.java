@@ -10,7 +10,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-
+/**
+ * Introduction activity with description of experiment and a link to the study
+ */
 public class IntroActivity extends Activity {
 
     @Override

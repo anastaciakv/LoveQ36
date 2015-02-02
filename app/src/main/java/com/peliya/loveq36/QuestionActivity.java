@@ -11,11 +11,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import com.daimajia.androidanimations.library.Techniques;
-import com.daimajia.androidanimations.library.YoYo;
+import com.peliya.loveq36.utils.Utils;
 
-
+/**
+ * Activity that shows questions by tapping on the screen
+ */
 public class QuestionActivity extends Activity {
+    private static final String ARG_POSITION = "position";
     private TextView tvQuestion;
     private static int position = 0;
     private static String[] questions;
@@ -28,14 +30,22 @@ public class QuestionActivity extends Activity {
         questions = getResources().getStringArray(R.array.questionstest);
         tvQuestion = (TextView) findViewById(R.id.tvQuestion);
 
+        if (savedInstanceState != null && savedInstanceState.containsKey(ARG_POSITION)) {
+            position = savedInstanceState.getInt(ARG_POSITION);
+        } else {
+            position = 0;
+        }
         updateQ();
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(ARG_POSITION, position);
+    }
+
     private void updateQ() {
-        tvQuestion.setText(questions[position]);
-        YoYo.with(Techniques.FadeIn)
-                .duration(700)
-                .playOn(tvQuestion);
+        Utils.updateTextViewFadeIn(tvQuestion, questions[position]);
     }
 
     @Override
@@ -69,7 +79,6 @@ public class QuestionActivity extends Activity {
                         }
                     }).setNegativeButton(android.R.string.cancel, null)
                     .create().show();
-
         }
     }
 

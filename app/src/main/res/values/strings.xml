@@ -13,9 +13,12 @@
     <string name="title_activity_question">QuestionActivity</string>
     <string name="btn_get_started">GET STARTED</string>
     <string name="msg_open_study">"Click OK if you want to load the study in PDF from Internet"</string>
-    <string name="title_activity_timer">TimerActivity</string>
+    <string name="title_activity_timer">Eye to eye</string>
     <string name="msg_last_question">Congratulations! That was the last Question! Now prepare to look each other in the eyes for 4 minutes...</string>
     <string name="action_start">Start</string>
     <string name="action_stop">Stop</string>
+    <string name="msg_in_love">You should be in love by now!</string>
+    <string name="action_play">Play</string>
+    <string name="action_pause">Pause</string>
 
 </resources>
