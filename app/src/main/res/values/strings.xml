@@ -20,5 +20,6 @@
     <string name="msg_in_love">You should be in love by now!</string>
     <string name="action_play">Play</string>
     <string name="action_pause">Pause</string>
+    <string name="action_timer">Timer</string>
 
 </resources>

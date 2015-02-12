@@ -161,6 +161,7 @@ public class TimerActivity extends Activity {
 
         menu.findItem(R.id.action_play).setVisible(!isPlaying);
         menu.findItem(R.id.action_pause).setVisible(isPlaying);
+
         return true;
     }
 

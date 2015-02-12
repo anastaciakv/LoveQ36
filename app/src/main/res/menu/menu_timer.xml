@@ -17,11 +17,13 @@
     <item
         android:id="@+id/action_start"
         android:title="@string/action_start"
+        android:icon="@drawable/ic_action_image_timer"
         android:orderInCategory="101"
         android:showAsAction="always"
         android:visible="false" />
 
     <item
+        android:icon="@drawable/ic_action_image_timer_off"
         android:id="@+id/action_stop"
         android:title="@string/action_stop"
         android:orderInCategory="100"

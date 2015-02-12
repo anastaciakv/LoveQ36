@@ -62,6 +62,10 @@ public class QuestionActivity extends Activity {
             NavUtils.navigateUpFromSameTask(this);
             return true;
         }
+        if (id == R.id.action_timer) {
+            startTimerActivity();
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 
