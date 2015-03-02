@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="questionstest">
-        <item>question1</item>
-        <item>question2</item>
-        <item>question3</item>
+        <item>1. You will see one question at a time here</item>
+        <item>2. Just click on the screen to switch between questions</item>
+        <item>3. After the last question you\'ll get to a screen with timer</item>
     </string-array>
 </resources>
