@@ -3,7 +3,7 @@
     tools:context=".IntroActivity">
     <item
         android:id="@+id/action_view_study"
-        android:title="View Study"
+        android:title="@string/menu_intro_view_study"
         android:orderInCategory="100"
         android:showAsAction="ifRoom|withText" />
 </menu>

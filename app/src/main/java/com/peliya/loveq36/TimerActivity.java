@@ -40,6 +40,7 @@ public class TimerActivity extends Activity {
     private ClipDrawable imageDrawable;
     private Handler handler;
     private MediaPlayer mp;
+
     private Runnable animateImage = new Runnable() {
 
         @Override
@@ -55,7 +56,11 @@ public class TimerActivity extends Activity {
     };
 
     private void doTheAnimation() {
-        level += (TICK_INTERVAL * FULL_LEVEL / COUNT_DOWN_INTERVAL);
+        if (isTimerStarted) {
+            level += (TICK_INTERVAL * FULL_LEVEL / COUNT_DOWN_INTERVAL);
+        } else {
+            level = FULL_LEVEL;
+        }
         handler.post(animateImage);
     }
 
@@ -84,10 +89,10 @@ public class TimerActivity extends Activity {
 
             @Override
             public void onFinish() {
+                isTimerStarted = false;
                 doTheAnimation();
                 Utils.updateTextViewFadeIn(label, getString(R.string.msg_in_love));
                 YoYo.with(Techniques.FadeIn).playOn(img);
-                isTimerStarted = false;
                 invalidateOptionsMenu();
 
                 v.vibrate(new long[]{200, 1000}, -1);

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="questionstest">
+        <item>1. Вы будете видеть по одному вопросу за раз</item>
+        <item>2. Просто прикоснитесь к экрану, чтобы переключаться между вопросами</item>
+        <item>3. После последнего вопроса вы попадете на экран с таймером</item>
+    </string-array>
+</resources>

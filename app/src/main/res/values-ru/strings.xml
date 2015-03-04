@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Love Q36</string>
+    <string name="action_settings">Настройки</string>
+    <string name="intro_caption">Влюбиться за 36 вопросов</string>
+    <string name="intro_text">Влюбиться возможно в любого человека!
+    \n\n20 лет назад психолог Артур Арон провел в своей лаборатории нехитрый эксперимент.
+        Он предложил незнакомым ранее мужчине и женщине вместе ответить на 36 вопросов.
+        Затем им нужно было молча смотреть друг другу в глаза в течение 4 минут.
+    \n\nСпустя полгода участники эксперимента были готовы пожениться!
+        \n\nПопробуете?</string>
+    <string name="btn_get_started">НАЧАТЬ</string>
+    <string name="msg_open_study">"Нажмите ДА, если вы хотите загрузить из Интернета исследование (на англ.) в PDF"</string>
+    <string name="title_activity_timer">Глаза в глаза</string>
+    <string name="msg_last_question">Поздравляем! Это был последний Вопрос! Теперь приготовьтесь смотреть друг другу в глаза в течении 4 минут…</string>
+    <string name="action_start">Старт</string>
+    <string name="action_stop">Стоп</string>
+    <string name="msg_in_love">Вы должны быть уже влюблены! ;-)</string>
+    <string name="action_play">Играть</string>
+    <string name="action_pause">Пауза</string>
+    <string name="action_timer">Таймер</string>
+    <string name="menu_intro_view_study">Смотреть исследование</string>
+
+</resources>
