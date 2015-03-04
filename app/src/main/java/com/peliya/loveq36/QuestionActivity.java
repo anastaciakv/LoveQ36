@@ -27,7 +27,8 @@ public class QuestionActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question);
         getActionBar().setDisplayHomeAsUpEnabled(true);
-        questions = getResources().getStringArray(R.array.questionstest);
+
+        questions = BuildConfig.DEBUG ? getResources().getStringArray(R.array.questionstest) : getResources().getStringArray(R.array.questions);
         tvQuestion = (TextView) findViewById(R.id.tvQuestion);
 
         if (savedInstanceState != null && savedInstanceState.containsKey(ARG_POSITION)) {
